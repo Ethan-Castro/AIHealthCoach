@@ -42,14 +42,14 @@ if st.button('Get advice'):
         'advice': goal
     }
     response = openai.Completion.create(
-      model="text-davinci-003",
-      prompt = prompt_template.format(**user_data),
-      temperature=.5,
-      max_tokens=500,
-      top_p=1,
-      frequency_penalty=0,
-      presence_penalty=0
-    )
+        model="gpt-3.5-turbo-instruct",
+        prompt=prompt_template.format(**user_data),
+        temperature=.5,
+        max_tokens=500,
+        top_p=1,
+        frequency_penalty=0,
+        presence_penalty=0
+        )
     
 # You can then format this prompt with the specific details:
 
