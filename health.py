@@ -3,6 +3,8 @@ import streamlit as st
 
 openai.api_key = st.secrets['openai_key']
 
+st.image('Untitled design (8).png', use_column_width=True)
+
 st.title('Personal AI Health Coach by Ethan Castro')
 
 # Get user input
