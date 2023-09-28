@@ -4,6 +4,14 @@ import streamlit as st
 openai.api_key = st.secrets['openai_key']
 
 st.image('Untitled design (10).jpg', width=200)
+st.markdown("""
+<style>
+    img:last-child {
+        display: block;
+        margin: 0 auto;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 st.title('Personal AI Health Coach by Ethan Castro')
 
