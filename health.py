@@ -5,13 +5,14 @@ openai.api_key = st.secrets['openai_key']
 col1, col2, col3 = st.beta_columns([1,6,1])
 
 with col1:
-st.write("")
+    st.write("")
 
 with col2:
-st.image("Untitled design (10).jpg")
+    st.image("Untitled design (10).jpg")
 
 with col3:
-st.write("")
+    st.write("")
+
 st.image('Untitled design (10).jpg', width=200)
 
 st.title('Personal AI Health Coach by Ethan Castro')
