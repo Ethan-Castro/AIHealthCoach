@@ -3,7 +3,8 @@ import streamlit as st
 
 openai.api_key = st.secrets['openai_key']
 
-st.image('Untitled design (8).png', use_column_width=False)
+centered_image = f"<center><img src='Untitled design (10).jpg' width='300'></center>"
+st.markdown(centered_image, unsafe_allow_html=True)
 
 st.title('Personal AI Health Coach by Ethan Castro')
 
