@@ -91,7 +91,7 @@ if st.button('Get Health Advice'):
         model="gpt-3.5-turbo-instruct",
         prompt=prompt_template.format(**user_data),
         temperature=.5,
-        max_tokens=500,
+        max_tokens=505,
     )
     
     if response.choices:
