@@ -106,40 +106,11 @@ if st.button('Get Health Advice'):
         generated_advice = response.choices[0].text.strip()
         st.write(generated_advice)
 
-import pdfkit
-import base64
-from io import BytesIO
-
-# Define a function to convert text to PDF with a specific font
-def text_to_pdf(text, font_name="Times New Roman"):
-    # Create an HTML template with desired font
-    html_content = f"""
-    <html>
-    <head>
-        <style>
-            body {{
-                font-family: "{font_name}";
-            }}
-        </style>
-    </head>
-    <body>
-        <div>{text}</div>
-    </body>
-    </html>
-    """
-    
-    # Convert HTML to PDF
-    pdf = pdfkit.from_string(html_content, False)
-    
-    return pdf
-
-# Convert the generated advice to PDF
-pdf_data = text_to_pdf(generated_advice)
-
-# Create a download link for the PDF
-pdf_b64 = base64.b64encode(pdf_data).decode()
-href = f'<a href="data:application/pdf;base64,{pdf_b64}" download="ai_generated_health_advice.pdf">Download Health Advice as PDF</a>'
-st.markdown(href, unsafe_allow_html=True)
+  st.download_button(
+            label="Download Health Advice",
+            data=generated_advice,
+            file_name="ai_generated_health_advice.txt",
+            mime="text/plain")
 
 # Footer
 st.markdown(
