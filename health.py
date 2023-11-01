@@ -106,11 +106,13 @@ if st.button('Get Health Advice'):
         generated_advice = response.choices[0].text.strip()
         st.write(generated_advice)
 
-  st.download_button(
+        # Download Response Button
+        st.download_button(
             label="Download Health Advice",
             data=generated_advice,
             file_name="ai_generated_health_advice.txt",
-            mime="text/plain")
+            mime="text/plain"
+        )
 
 # Footer
 st.markdown(
