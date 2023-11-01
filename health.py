@@ -96,8 +96,8 @@ if st.button('Get Health Advice'):
         'tdee': tdee,
     }
 
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
+     response = openai.Completion.create(
+        model="gpt-3.5-turbo-instruct",
         prompt=prompt_template.format(**user_data),
         temperature=.5,
         max_tokens=505,
