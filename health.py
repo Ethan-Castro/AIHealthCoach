@@ -16,7 +16,7 @@ st.markdown(
     """
     <style>
         .reportview-container {
-            background: #E0E5E8;
+            background: #FFFFFF;
         }
         .title {
             color: #3b5998;
@@ -28,7 +28,7 @@ st.markdown(
             margin-bottom: 10px;
         }
         .sidebar .sidebar-content {
-            background: #f4f6f6;
+            background: #FFFFFF;
         }
     </style>
     """,
