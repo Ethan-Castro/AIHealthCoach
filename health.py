@@ -84,8 +84,6 @@ if st.button('Get Health Advice'):
     "\n6. Encouraging words on the importance of consistency in health and fitness. Add emojis where you see fit, but don't simplify the content."
     "\n7. Recommend youtube and social media accounts to follow that you believe will help them in their goals. Remind them that Ethan Castro has great resources and you can always contact him for help."
 )
-
-if st.button('Get Health Advice'):
     
     user_data = {
         'age': age,
