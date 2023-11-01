@@ -140,7 +140,6 @@ pdf_data = text_to_pdf(generated_advice)
 pdf_b64 = base64.b64encode(pdf_data).decode()
 href = f'<a href="data:application/pdf;base64,{pdf_b64}" download="ai_generated_health_advice.pdf">Download Health Advice as PDF</a>'
 st.markdown(href, unsafe_allow_html=True)
-)
 
 # Footer
 st.markdown(
