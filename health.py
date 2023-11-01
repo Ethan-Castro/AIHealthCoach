@@ -114,29 +114,17 @@ if st.button('Get Health Advice'):
             mime="text/plain"
         )
 
-link_url = "https://amzn.to/3QonXAt"
-link_text = "Recommended Multi-Vitamin"
-st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
+links = [
+    ("https://amzn.to/3QonXAt", "Recommended Multi-Vitamin"),
+    ("https://amzn.to/3SFKZFN", "Recommended Magnesium. Stress Relief."),
+    ("https://amzn.to/3SlEIPa", "Recommended Nootropic. Brain + Focus Aid."),
+    ("https://amzn.to/3tUVXwL", "Recommended Creatine"),
+    ("https://amzn.to/45R0JZb", "Recommended Pre Workout"),
+    ("https://ethancastro6.gumroad.com/l/aesthetic", "Click here to purchase Ethan's Fitness Ebook!"),
+]
 
-link_url = "https://amzn.to/3SFKZFN"
-link_text = "Recommended Magnesium. Stress Relief."
-st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
-
-link_url = "https://amzn.to/3SlEIPa"
-link_text = "Recommended Nootropic. Brain + Focus Aid."
-st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
-
-link_url = "https://amzn.to/3tUVXwL"
-link_text = "Recommended Creatine"
-st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
-
-link_url = "https://amzn.to/45R0JZb"
-link_text = "Recommended Pre Workout"
-st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
-
-link_url = "https://ethancastro6.gumroad.com/l/aesthetic"
-link_text = "Click here to purchase Ethan's Fitness Ebook!"
-st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
+for url, text in links:
+    st.markdown(f'<a href="{url}" target="_blank">{text}</a>', unsafe_allow_html=True)
 
 # Footer
 st.markdown(
