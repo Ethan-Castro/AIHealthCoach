@@ -81,7 +81,7 @@ if st.button('Get Health Advice'):
     "\n3. A motivational quote to inspire them on their health journey."
     "\n4. Insight into nutrition psychology to maintain a healthy relationship with food."
     "\n5. A list of healthy snacks they can incorporate into their diet."
-    "\n6. Encouraging words on the importance of consistency in health and fitness."
+    "\n6. Encouraging words on the importance of consistency in health and fitness. Add emojis in the beginning of each."
 )
 
 
