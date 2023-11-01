@@ -126,6 +126,10 @@ link_url = "https://amzn.to/3SlEIPa"
 link_text = "Recommended Nootropic. Brain + Focus Aid."
 st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
 
+link_url = "https://amzn.to/3tUVXwL"
+link_text = "Recommended Creatine"
+st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
+
 link_url = "https://amzn.to/45R0JZb"
 link_text = "Recommended Pre Workout"
 st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
