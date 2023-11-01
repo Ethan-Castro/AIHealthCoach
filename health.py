@@ -114,10 +114,22 @@ if st.button('Get Health Advice'):
             mime="text/plain"
         )
 
+link_url = "https://amzn.to/3QonXAt"
+link_text = "Recommended Multi-Vitamin"
+st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
+
+link_url = "https://amzn.to/3SFKZFN"
+link_text = "Recommended Magnesium. Stress Relief."
+st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
+
+link_url = "https://amzn.to/3SlEIPa"
+link_text = "Recommended Nootropic. Brain + Focus Aid."
+st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
 
 link_url = "https://amzn.to/45R0JZb"
 link_text = "Recommended Pre Workout"
 st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
+
 link_url = "https://ethancastro6.gumroad.com/l/aesthetic"
 link_text = "Click here to purchase Ethan's Fitness Ebook!"
 st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
