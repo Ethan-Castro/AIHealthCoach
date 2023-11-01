@@ -67,7 +67,7 @@ with col2:
     st.write(bmr)
 with col3:
     st.subheader("TDEE:")
-    st.write(tdee)
+    st.write(tdee + 'calories')
 
 if st.button('Get Health Advice'):
     # Generate AI response
