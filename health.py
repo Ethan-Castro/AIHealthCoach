@@ -1,4 +1,3 @@
-pip install pdfkit
 import openai
 import streamlit as st
 
