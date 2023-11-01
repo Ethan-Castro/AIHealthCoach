@@ -113,7 +113,13 @@ if st.button('Get Health Advice'):
             file_name="ai_generated_health_advice.txt",
             mime="text/plain"
         )
+image_url = "Screenshot 2023-11-01 at 10.30.01 AM.png"
+st.image(image_url, width=300, caption="Image Caption")
 
+# Add a link at the bottom
+link_url = "https://ethancastro6.gumroad.com/l/aesthetic"
+link_text = "Click here to purchase Ethan's Fitness Ebook!"
+st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
 # Footer
 st.markdown(
     """
