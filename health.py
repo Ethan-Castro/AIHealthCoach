@@ -10,6 +10,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+st.image('DALL·E 2023-11-01 09.22.00 - Vector design of a heart symbol constructed from interlocking triangles, creating a low-poly appearance. The colors transition from deep red at the ba.png', width=100)  # Adjust width as needed
+
 
 # Custom Styles
 st.markdown(
