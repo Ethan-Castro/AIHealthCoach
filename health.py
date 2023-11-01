@@ -74,19 +74,19 @@ with col3:
 if st.button('Get Health Advice'):
     # Generate AI response
     prompt_template = (
-        "I am an AI health coach, and this is not medical advice. You are {age} years old, weigh {weight} lbs, "
-        "are {height} inches tall, and your goal is {goal}. Your BMI is {bmi}, and your TDEE is {tdee} calories. "
-        "\n1. Provide Tailored advice to help achieve the stated goal."
+    "I am an AI health coach, and this is not medical advice. You are {age} years old, weigh {weight} lbs, "
+    "are {height} inches tall, and your goal is {goal}. Your BMI is {bmi}, and your TDEE is {tdee} calories. "
+    "\n1. Provide Tailored advice to help achieve the stated goal."
     "\n2. A brief exercise routine suitable for them."
     "\n3. A motivational quote to inspire them on their health journey."
     "\n4. Insight into nutrition psychology to maintain a healthy relationship with food."
     "\n5. A list of healthy snacks they can incorporate into their diet."
     "\n6. Encouraging words on the importance of consistency in health and fitness. Add emojis where you see fit, but don't simplify the content."
     "\n7. Recommend youtube and social media accounts to follow that you believe will help them in their goals. Remind them that Ethan Castro has great resources and you can always contact him for help."
-
 )
 
-
+if st.button('Get Health Advice'):
+    
     user_data = {
         'age': age,
         'weight': weight,
@@ -96,25 +96,26 @@ if st.button('Get Health Advice'):
         'tdee': tdee,
     }
 
-response = openai.Completion.create(
-    model="gpt-3.5-turbo-instruct",
-    prompt=prompt_template.format(**user_data),
-    temperature=.5,
-    max_tokens=505
-)
-
-if response.choices:
-    st.markdown("<h2 class='section-header'>AI Generated Health Advice</h2>", unsafe_allow_html=True)
-    generated_advice = response.choices[0].text.strip()
-    st.write(generated_advice)
-
-    # Download Response Button
-    st.download_button(
-        label="Download Health Advice",
-        data=generated_advice,
-        file_name="ai_generated_health_advice.txt",
-        mime="text/plain"
+    response = openai.Completion.create(
+        model="gpt-3.5-turbo-instruct",
+        prompt=prompt_template.format(**user_data),
+        temperature=.5,
+        max_tokens=505
     )
+
+    if response.choices:
+        st.markdown("<h2 class='section-header'>AI Generated Health Advice</h2>", unsafe_allow_html=True)
+        generated_advice = response.choices[0].text.strip()
+        st.write(generated_advice)
+
+        # Download Response Button
+        st.download_button(
+            label="Download Health Advice",
+            data=generated_advice,
+            file_name="ai_generated_health_advice.txt",
+            mime="text/plain"
+        )
+
 # Footer
 st.markdown(
     """
