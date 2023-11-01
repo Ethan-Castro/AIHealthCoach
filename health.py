@@ -105,9 +105,9 @@ if st.button('Get Health Advice'):
     )
     
     if response.choices:
-	st.markdown("<h2 class='section-header'>AI Generated Health Advice</h2>", unsafe_allow_html=True)
-        generated_advice = response.choices[0].text.strip()
-        st.write(generated_advice)
+	    st.markdown("<h2 class='section-header'>AI Generated Health Advice</h2>", unsafe_allow_html=True)
+	    generated_advice = response.choices[0].text.strip()
+	    st.write(generated_advice)
 
  # Download Response Button
         st.download_button(
