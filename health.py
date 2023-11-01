@@ -96,26 +96,18 @@ if st.button('Get Health Advice'):
         'tdee': tdee,
     }
 
-    response = openai.Completion.create(
-        model="gpt-3.5-turbo-instruct",
-        prompt=prompt_template.format(**user_data),
-        temperature=.5,
-        max_tokens=505,
-	
+if response.choices:
+    st.markdown("<h2 class='section-header'>AI Generated Health Advice</h2>", unsafe_allow_html=True)
+    generated_advice = response.choices[0].text.strip()
+    st.write(generated_advice)
+
+    # Download Response Button
+    st.download_button(
+        label="Download Health Advice",
+        data=generated_advice,
+        file_name="ai_generated_health_advice.txt",
+        mime="text/plain"
     )
-    
-    if response.choices:
-	    st.markdown("<h2 class='section-header'>AI Generated Health Advice</h2>", unsafe_allow_html=True)
-	    generated_advice = response.choices[0].text.strip()
-	    st.write(generated_advice)
-
- # Download Response Button
-        st.download_button(
-            label="Download Health Advice",
-            data=generated_advice,
-            file_name="ai_generated_health_advice.txt",
-            mime="text/plain"
-
 # Footer
 st.markdown(
     """
