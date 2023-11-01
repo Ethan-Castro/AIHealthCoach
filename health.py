@@ -117,8 +117,11 @@ if st.button('Get Health Advice'):
 
 link_url = "https://amzn.to/45R0JZb"
 link_text = "Recommended Pre Workout"
+st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
 link_url = "https://ethancastro6.gumroad.com/l/aesthetic"
 link_text = "Click here to purchase Ethan's Fitness Ebook!"
+st.markdown(f'<a href="{link_url}" target="_blank">{link_text}</a>', unsafe_allow_html=True)
+
 # Footer
 st.markdown(
     """
