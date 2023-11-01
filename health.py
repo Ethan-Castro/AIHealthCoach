@@ -106,7 +106,7 @@ if st.button('Get Health Advice'):
         generated_advice = response.choices[0].text.strip()
         st.write(generated_advice)
 
-       import pdfkit
+import pdfkit
 import base64
 from io import BytesIO
 
