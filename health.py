@@ -76,9 +76,14 @@ if st.button('Get Health Advice'):
     prompt_template = (
         "I am an AI health coach, and this is not medical advice. You are {age} years old, weigh {weight} lbs, "
         "are {height} inches tall, and your goal is {goal}. Your BMI is {bmi}, and your TDEE is {tdee} calories. "
-        "Provide advice for the goal, a brief exercise routine, a motivational quote, nutrition psychology advice, "
-        "healthy snacks, and words for consistency."
-    )
+        "\n1. Provide Tailored advice to help achieve the stated goal."
+    "\n2. A brief exercise routine suitable for them."
+    "\n3. A motivational quote to inspire them on their health journey."
+    "\n4. Insight into nutrition psychology to maintain a healthy relationship with food."
+    "\n5. A list of healthy snacks they can incorporate into their diet."
+    "\n6. Encouraging words on the importance of consistency in health and fitness."
+)
+
 
     user_data = {
         'age': age,
