@@ -58,7 +58,7 @@ tdee = round(bmr * activity_scale)
 
 # Display Calculations & Get Advice Button
 st.markdown("<h2 class='section-header'>Your Metrics</h2>", unsafe_allow_html=True)
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 with col1:
     st.subheader("BMI:")
     st.write(bmi)
