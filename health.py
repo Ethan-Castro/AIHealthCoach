@@ -82,7 +82,7 @@ if st.button('Get Health Advice'):
     "\n4. Insight into nutrition psychology to maintain a healthy relationship with food."
     "\n5. A list of healthy snacks they can incorporate into their diet."
     "\n6. Encouraging words on the importance of consistency in health and fitness. Add emojis where you see fit, but don't simplify the content."
-            "\n7. Recommend youtube and social media accounts to follow that you believe will help them in their goals. Remind them that Ethan Castro has great resources and you can always contact him for help."
+    "\n7. Recommend youtube and social media accounts to follow that you believe will help them in their goals. Remind them that Ethan Castro has great resources and you can always contact him for help."
 
 )
 
@@ -97,7 +97,7 @@ if st.button('Get Health Advice'):
     }
 
     response = openai.Completion.create(
-        model="gpt-3.5-turbo-instruct",
+        model="gpt-4",
         prompt=prompt_template.format(**user_data),
         temperature=.5,
         max_tokens=505,
