@@ -94,12 +94,18 @@ if st.button('Get Health Advice'):
         'tdee': tdee,
     }
 
-    response = openai.Completion.create(
-        model="gpt-3.5-turbo-instruct",
-        prompt=prompt_template.format(**user_data),
-        temperature=.5,
-        max_tokens=505
-    )
+  from openai import OpenAI
+client = OpenAI()
+
+response = client.chat.completions.create(
+  model="gpt-4-turbo-preview",
+  messages=[],
+  temperature=1,
+  max_tokens=256,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0
+)
 
     if response.choices:
         st.markdown("<h2 class='section-header'>AI Generated Health Advice</h2>", unsafe_allow_html=True)
