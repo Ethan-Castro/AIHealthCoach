@@ -107,7 +107,7 @@ response = client.chat.completions.create(
   presence_penalty=0
 )
 
-    if response.choices:
+if response.choices:
         st.markdown("<h2 class='section-header'>AI Generated Health Advice</h2>", unsafe_allow_html=True)
         generated_advice = response.choices[0].text.strip()
         st.write(generated_advice)
