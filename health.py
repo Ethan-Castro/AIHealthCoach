@@ -94,7 +94,7 @@ if st.button('Get Health Advice'):
         'tdee': tdee,
     }
 
-  from openai import OpenAI
+from openai import OpenAI
 client = OpenAI()
 
 response = client.chat.completions.create(
